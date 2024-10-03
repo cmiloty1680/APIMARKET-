@@ -9,7 +9,6 @@ namespace Apimarket.Controller
 
     public class FeedingController : ControllerBase
     {
-<<<<<<< HEAD
         public IConfiguration _Configuration { get; set; }
         public GeneralFunctions FunctionsGeneral;
         public FeedingController(IConfiguration configuration)
@@ -21,18 +20,6 @@ namespace Apimarket.Controller
 
 
 
-=======
-        public GeneralFunctions FunctionsGeneral;
-
-        public FeedingController(IConfiguration configuration)
-        {
-            FunctionsGeneral = new GeneralFunctions(configuration);
-
-        }
-    
-
-    
->>>>>>> c96aa416e04d7ef31742a99d00d6162b2a199347
         [HttpPost("CreateFeeding")]
         public IActionResult CreateFeeding(FeedingModel number)
         {

@@ -8,20 +8,12 @@ namespace Apimarket.Controller
     [Route("Api/[controller]")]
     public class ProtocolController : ControllerBase
     {
-<<<<<<< HEAD
         public IConfiguration _Configuration { get; set; }
         public GeneralFunctions FunctionsGeneral;
         public ProtocolController(IConfiguration configuration)
         {
             FunctionsGeneral = new GeneralFunctions(configuration);
             _Configuration = configuration;
-=======
-        public GeneralFunctions FunctionsGeneral;
-
-        public ProtocolController(IConfiguration configuration) 
-        {
-            FunctionsGeneral = new GeneralFunctions(configuration);
->>>>>>> c96aa416e04d7ef31742a99d00d6162b2a199347
 
         }
         [HttpPost("CreateProtocol")]

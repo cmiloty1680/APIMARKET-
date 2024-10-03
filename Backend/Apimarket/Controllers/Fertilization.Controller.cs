@@ -1,16 +1,11 @@
-<<<<<<< HEAD
 ﻿using Apimarket.Functions;
 using APIMARKET.Models;
-=======
-﻿using APIMARKET.Models;
->>>>>>> c96aa416e04d7ef31742a99d00d6162b2a199347
 using Microsoft.AspNetCore.Mvc;
 
 namespace APIMARKET.Controllers
 {
     [ApiController]
     [Route("Api/controller")]
-<<<<<<< HEAD
     public class FertilizationController : ControllerBase
     {
         public GeneralFunctions  FuntionsGeneral;
@@ -19,10 +14,6 @@ namespace APIMARKET.Controllers
         {
             FuntionsGeneral = new GeneralFunctions(configuration);
         }
-=======
-    public class FertilizationController : Controller
-    {
->>>>>>> c96aa416e04d7ef31742a99d00d6162b2a199347
         [HttpPost("CreateFertilization")]
         public IActionResult CreateFertilization(FertilizationModel fertilization)
         {
