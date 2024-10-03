@@ -2,16 +2,16 @@
 {
     public class HiveModel
     {
-        public int Id_Colmena { get; set; }
+        public int Id_Hive { get; set; }
 
-        public DateTime Feci {  get; set; } 
+        public DateTime Feci_Hive {  get; set; } 
 
-        public string Est { get; set; }
+        public string Est_Hive { get; set; }
 
-        public int NumCua { get; set; }
+        public int NumCua_Hive { get; set; }
 
-        public int NumAlz { get; set; }
+        public int NumAlz_Hive { get; set; }
 
-        public int Can { get; set; }
+        public int Can_Hive { get; set; }
     }
 }

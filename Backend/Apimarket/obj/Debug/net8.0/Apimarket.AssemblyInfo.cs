@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Apimarket")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c277663aec072e887bb6957d78c2816153abb5b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Apimarket")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Apimarket")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

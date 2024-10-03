@@ -1,4 +1,6 @@
+using Apimarket.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
@@ -13,7 +15,7 @@ builder.Services.AddSwaggerGen();
 
 // este es otro ejemplo como se puede realizar
 // pero es mejor hacerlo desde la carpeta model...
-/*
+
 var key = Encoding.UTF8.GetBytes("arjmvdkmdkfmgrkmr");
 builder.Services.AddAuthentication(option =>
 {
@@ -30,7 +32,16 @@ builder.Services.AddAuthentication(option =>
         ValidateAudience = false
     };
 });
-*/
+
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
+    new MySqlServerVersion(new Version(8, 0, 23)))
+    );
+builder.Services.AddScoped<ResponsibleServices>();
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -39,9 +50,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.UseAuthorization();
-
+app.UseAuthentication();
 app.MapControllers();
 
 app.Run();

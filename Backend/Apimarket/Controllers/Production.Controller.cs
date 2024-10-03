@@ -8,17 +8,15 @@ namespace Apimarket.Controllers
 {
     [ApiController]
     [Route("Api/[controller]")]
-    public class ProductionController : Controller
+    public class ProductionController : ControllerBase
     {
 
         public IConfiguration _Configuration { get; set; }
         public GeneralFunctions FunctionsGeneral;
-        public JWTModels JWT;
         public ProductionController(IConfiguration configuration)
         {
             FunctionsGeneral = new GeneralFunctions(configuration);
             _Configuration = configuration;
-            JWT = _Configuration.GetSection("JWT").Get<JWTModels>();
 
         }
 
@@ -70,7 +68,7 @@ namespace Apimarket.Controllers
                 }
             }
         }
-        [HttpPut("UpdateProduction")]
+        [HttpPost("UpdateProduction")]
         public IActionResult UpdateProduction(int Id, ProductionModel production)
         {
             try

@@ -9,16 +9,15 @@ namespace Apimarket.Controllers
 {
     [ApiController]
     [Route("Api/[controller]")]
-    public class HiveController : Controller
+    public class HiveController : ControllerBase
     {
+  
         public IConfiguration _Configuration { get; set; }
         public GeneralFunctions FunctionsGeneral;
-        public JWTModels JWT;
         public HiveController(IConfiguration configuration)
         {
             FunctionsGeneral = new GeneralFunctions(configuration);
             _Configuration = configuration;
-            JWT = _Configuration.GetSection("JWT").Get<JWTModels>();
 
         }
         [HttpPost("CreateHive")]
@@ -63,7 +62,7 @@ namespace Apimarket.Controllers
                 return StatusCode(500, ex.ToString());
             }
         }
-        [HttpPut("UpdateHive")]
+        [HttpPost("UpdateHive")]
         public IActionResult UpdateHive(HiveModel hive)
         {
             try
