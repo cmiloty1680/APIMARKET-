@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 ﻿using Apimarket.Functions;
 using APIMARKET.Models;
+=======
+﻿using APIMARKET.Models;
+>>>>>>> c96aa416e04d7ef31742a99d00d6162b2a199347
 using Microsoft.AspNetCore.Mvc;
     
 namespace APIMARKET.Controllers
 {
     [ApiController]
     [Route("Api/controller")]
+<<<<<<< HEAD
     public class CollecDroneController : ControllerBase
     {
         public IConfiguration _Configuration { get; set; }
@@ -16,6 +21,10 @@ namespace APIMARKET.Controllers
             _Configuration = configuration;
 
         }
+=======
+    public class CollecDroneController : Controller
+    {
+>>>>>>> c96aa416e04d7ef31742a99d00d6162b2a199347
         [HttpPost("CreateCollecDrone")]
         public IActionResult CreateCollecDrone(CollecDroneModel collecDrone)
         {
